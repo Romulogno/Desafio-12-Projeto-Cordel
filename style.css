@@ -3,64 +3,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
 
 
+/*Declaração das variaveis de fontes */
 :root {
     --font01:'Passion One';
     --font02:'Sriracha', cursive;
     --font03:Verdana;
-
 }
 
+/*Deixa todo o conteudo da página com 0 padding e 0 margin */
 *{
     margin: 0px;
     padding: 0px;
     font-size: 1em;
 }
 
+
 body {
-    min-height: 100vh;
-    background-color: darkgray;
+    min-height: 100vh;                  /* deixa com o minimo height 100 viewport height ou seja tem um limite minimo */
+    background-color: darkgray;        
 }
 
 header {
     color: white;
     background-color: black;
     text-align: center;
-    min-height: 50px;
+    min-height: 50px;                   /* deixa o a altura minima com 50px, logo o header nao diminiu mais do que isso */
 }
 
 header > h1 {
-    font-family: var(--font01), cursive;
-    font-size: 10vw;
+    font-family: var(--font01), cursive;/* adiciona a fonte que foi declarada como variavel no início do documento*/
+    font-size: 10vw;                    /* deixa o tamanho da fonte variavel de acordo com o tamanho da tela, 10viewport width */
     padding-top: 50px;
 }
 
 header > p{
     padding-bottom: 50px;
-    font-family: var(--font03);
+    font-family: var(--font03);         /* Adiciona a fonte que foi declarada como variavel no ínicio do documento */
     font-weight: bold;
 }
 
 header a, footer a {
-    text-decoration: none;
+    text-decoration: none;              /* Tira o parâmetro de underline dos links citados */
     color:white;
     font-weight: bolder;
 }
 
-header a:hover, footer a:hover {
+header a:hover, footer a:hover {        /* Adiciona o underline quando o mouse é passado em cima dos links */
     text-decoration: underline;
 }
 
 section {
-    font-family: var(--font02);
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-    line-height: 2em;
+    font-family: var(--font02);         /* adiciona a fonte declarada como variavel no inicio do documento */
+    padding-top: 10vh;                  /* adiciona um padding no top de 10 viewport hight ou seja um padding variavel de acordo com o tamanho da tela */
+    padding-bottom: 10vh;               /* adiciona um padding no bottom de 10vh ou seja um padding variavel e acordo com o tamanho da tela */
+    line-height: 2em;                   /* adiciona um espaço entre as linhas do texto*/
     padding-left: 30px;
-    font-size: 3.5vw;
-}
+    font-size: 3.5vw;                   /* altera o tamanho da fonte para 3.5vm que é um parametro variavel, que se altera de acordo com o tamanho da tela */
+}   
 
 section > p{
-    padding-bottom: 2em;
+    padding-bottom: 2em;                /* adiciona padding bottom */
 }
 section.normal {
     background-color: white;
@@ -70,22 +72,22 @@ section.normal {
 section.imagem{
     background-color: rgb(51, 51, 51);
     color: white;
-    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);
-    background-size: cover;
-    background-attachment: fixed;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.473);/* adiciona uma caixa de sobra mas com sombra interna (inset) */
+    background-size: cover;             /*muda o tamanho da imagem para que ela seja totalmente exibida na tela e sem cortes */       
+    background-attachment: fixed;       /*faz com que a imagem fique fixa mesmo que o conteudo continue rolando */
 }
 
 section.imagem > p{
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0.514);
+    display: inline-block;             /*Essa poha que criou a maldita caixa que o texto fica inserido sobre a imagem*/
+    background-color: rgba(0, 0, 0, 0.514); /* cor de fundo com transparencia */
     padding: 5px;
-    text-shadow: 1px 1px 0px black;
+    text-shadow: 1px 1px 0px black; /* adiciona sombra ao texto */
 }
 
 
 section#img1 {
-    background-image: url(imagens/background001.jpg);
-    background-position: right;
+    background-image: url(imagens/background001.jpg); /* adiciona uma imagem de fundo */
+    background-position: right center;       /* define a posição da imagem de fundo */
 }
 
 section#img2{
@@ -95,9 +97,9 @@ section#img2{
 
 
 footer{
-    font-family: var(--font03);
+    font-family: var(--font03);    /* adiciona a fonte definida como variavel no inicio do documento */
     background-color: black;
     color:white;
-    text-align: center;
+    text-align: center;            /* alinha o texto ao centro do documento */
     padding: 10px
 }
